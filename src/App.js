@@ -32,6 +32,22 @@ const App = () => {
     }
   }
 
+  const handleReset = () => {
+    setBoard([
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ])
+    setTreasureLocation(Math.floor(Math.random() * board.length))
+    setBombLocation(Math.floor(Math.random() * board.length))
+  }
+
   console.log("treasureLocation:", treasureLocation)
   console.log("bombLocation:", bombLocation)
 
@@ -49,7 +65,11 @@ const App = () => {
         />
         )
       })}
+      <p>
+      <button onClick={handleReset}>Restart Game</button>
+      </p>
       </div>
+      
     </>
   )
 }
