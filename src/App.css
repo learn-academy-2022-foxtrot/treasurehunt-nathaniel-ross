@@ -16,3 +16,7 @@ h1 {
   width: 610px;
   margin: 0 auto;
 }
+
+.guess-counter {
+  text-align: center;
+}
